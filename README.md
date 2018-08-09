@@ -38,13 +38,129 @@ Development of an REST API for CRUD operations of Persons
 </ol>
 
 # ENDPOINTs of Person REST API 
-- Header "Content-Type: application/json"
 
-## ADD
+- ADD
+<pre name="code">
+Method: POST
 URL: http://localhost:3000/person
-
-
-- UPDATE: http://localhost:3000/person/cjkmgyp3e0002g0m5ixlix7g7
+Content-Type: application/json
+Request:	
+{
+  "person": { "firstName":"gil",
+        "lastName":"rios",
+        "age":18,
+        "gender":"Masculino"  }
+}
+Response:
+{
+    "person": {
+        "lastName": "rios",
+        "active": true,
+        "_id": "5b6c8a530d94f669c3f71ef6",
+        "firstName": "gil",
+        "age": 18,
+        "gender": "Masculino",
+        "created": "2018-08-09T18:39:15.184Z",
+        "cuid": "cjkmwpfxs0000w3spdxcu4n1h",
+        "__v": 0
+    }
+}
+</pre>
+- UPDATE: 
+<pre name="code">
+Method: PUT
+URL: http://localhost:3000/person/cjkmwpfxs0000w3spdxcu4n1h <---cuid parameter
+Content-Type: application/json
+Request:
+{
+  "person": { "firstName":"yahoo",
+        "lastName":"sasdsad",
+        "age":18,
+        "gender":"Femenino",
+        "cuid": "cjkmgyp3e0002g0m5ixlix7g7"}
+}
+Response:
+{
+    "person": {
+        "lastName": "sasdsad",
+        "active": true,
+        "_id": "5b6c8a530d94f669c3f71ef6",
+        "firstName": "yahoo",
+        "age": 18,
+        "gender": "Femenino",
+        "created": "2018-08-09T18:39:15.184Z",
+        "cuid": "cjkmwpfxs0000w3spdxcu4n1h",
+        "__v": 0
+    }
+}
+</pre>
 - DELETE: 
+<pre name="code">
+Method: DELETE
+URL: http://localhost:3000/person/cjkmwpfxs0000w3spdxcu4n1h <---cuid parameter
+Response:
+{
+    "person": {
+        "lastName": "sasdsad",
+        "active": false,   <---Inactive
+        "_id": "5b6c8a530d94f669c3f71ef6",
+        "firstName": "yahoo",
+        "age": 18,
+        "gender": "Femenino",
+        "created": "2018-08-09T18:39:15.184Z",
+        "cuid": "cjkmwpfxs0000w3spdxcu4n1h",
+        "__v": 0
+    }
+}
+</pre>
 - GET: 
+<pre name="code">
+Method: GET
+URL: http://localhost:3000/person
+Response:
+{
+    "persons": [
+        {
+            "lastName": "sasdsad",
+            "active": false,
+            "_id": "5b6c8a530d94f669c3f71ef6",
+            "firstName": "yahoo",
+            "age": 18,
+            "gender": "Femenino",
+            "created": "2018-08-09T18:39:15.184Z",
+            "cuid": "cjkmwpfxs0000w3spdxcu4n1h",
+            "__v": 0
+        },
+        {
+            "lastName": "rios",
+            "active": true,
+            "_id": "5b6c5953b393263598c5b8ba",
+            "firstName": "gil",
+            "age": 18,
+            "gender": "Masculino",
+            "created": "2018-08-09T15:10:11.611Z",
+            "cuid": "cjkmp8l980000l4spp5x5ycv4",
+            "__v": 0
+        }
+    ]
+}
+</pre>
 - GETBYID: 
+<pre name="code">
+Method: GET
+URL: http://localhost:3000/person/cjkmwpfxs0000w3spdxcu4n1h <---cuid parameter
+Response:
+{
+    "person": {
+        "lastName": "sasdsad",
+        "active": false,
+        "_id": "5b6c8a530d94f669c3f71ef6",
+        "firstName": "yahoo",
+        "age": 18,
+        "gender": "Femenino",
+        "created": "2018-08-09T18:39:15.184Z",
+        "cuid": "cjkmwpfxs0000w3spdxcu4n1h",
+        "__v": 0
+    }
+}
+</pre>
