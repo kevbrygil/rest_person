@@ -1,5 +1,3 @@
-'use strict';
-
 import Person from '../models/person';
 import cuid from 'cuid';
 
@@ -29,7 +27,7 @@ PersonController.getById = async (req, res) => {
         });
     }
     catch(err){
-
+        res.send(err);
     }
 }
 
@@ -45,7 +43,7 @@ PersonController.add = async (req, res) => {
         });
     }
     catch (err) {
-        console.log(err);
+        res.send(err);
     }
 }
 
@@ -71,7 +69,7 @@ PersonController.update = async (req, res) => {
         });
     }
     catch (err) {
-        console.log(err);
+        res.send(err);
     }
 }
 
@@ -93,7 +91,7 @@ PersonController.inactivate = async (req, res) => {
         });
     }
     catch (err) {
-        console.log(err);
+        res.send(err);
     }
 }
 

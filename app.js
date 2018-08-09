@@ -1,12 +1,11 @@
-'use strict';
-
-const express = require('express');
-const app = new express();
-var bodyParser = require('body-parser');
-const config = require('./config/config');
+import express from 'express';
+import bodyParser from 'body-parser';
+import config from './config/config';
 import connectToDb from './database/con';
 
-// register JSON middlewear
+const app = new express();
+
+// register JSON middleware
 app.use(bodyParser.json());
 
 connectToDb();
@@ -14,7 +13,7 @@ connectToDb();
 require('./routes/personRoutes')(app);
 require('./routes/versionRoutes')(app, config);
 
-app.listen(3000, () => {
+app.listen(config.port,config.hostname, () => {
     /* eslint-disable */
-    console.log('server up!');
+    console.log(`Server running at http://${config.hostname}:${config.port}/`);
 });

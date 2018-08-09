@@ -1,7 +1,4 @@
-'use strict';
-
-const Router = require('express');
-const personCtl = require('../controllers/person');
+import Router from 'express';
 import PersonController from '../controllers/person';
 
 const personRoutes = (app) => {

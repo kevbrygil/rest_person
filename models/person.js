@@ -1,5 +1,3 @@
-'use strict';
-
 import mongoose, {Schema} from 'mongoose';
 
 const personSchema = new Schema({
@@ -11,7 +9,7 @@ const personSchema = new Schema({
     active: { type: Boolean, default: true},
     created: { type: Date, default: Date.now, required: true },
 });
-//module.exports = exports = mongoose.model('Person', personSchema);
+
 let Person = mongoose.model('Person', personSchema);
 
 export default Person;

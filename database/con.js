@@ -9,8 +9,8 @@ const connectToDb = async () => {
 
     }
     catch (err) {
-
-      console.log(err);
+        /* eslint-disable */
+        console.log(err);
     }
 }
 
