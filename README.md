@@ -1,16 +1,17 @@
 # Rest API Person
-Development of an REST API for CRUD operations of Persons
+Development of an REST API for CRUD operations of Persons.
 
 # Main Tecnologies used
-- NodeJs Language
-- Express Framework
-- MongoDB Database
+- NodeJs Language.
+- Express Framework.
+- MongoDB Database.
 - The ODM Mongoose for mapper the objects and assign in a MongoDB document.
+- ECMAScript 6.
 
 # Requirements
-- DMongoDB Database
-- Robo 3T(Optional)
-- Nodejs with NPM
+- DMongoDB Database.
+- Robo 3T(Optional).
+- Nodejs with NPM.
 
 # Config the environment
 <ol>
@@ -21,25 +22,25 @@ Development of an REST API for CRUD operations of Persons
 	</li>
 </ol>
 
-# Intall Packages & Run APP
+# Intall Packages & Run APP.
 <ol>
-	<li>Open Terminal</li>
-	<li>Go to the source file of the APP</li>
+	<li>Open Terminal.</li>
+	<li>Go to the source file of the APP.</li>
 	<li>
 		Type the following in the Terminal:
 		<pre name="code">npm i</pre>
 	</li>
-	<li>Test with eslint
+	<li>Test with eslint:
 		<pre name="code">npm run lint</pre>
 	</li>
-	<li>Run APP
+	<li>Run APP:
 		<pre name="code">npm start</pre>
 	</li>
 </ol>
 
-# ENDPOINTs of Person REST API 
+# ENDPOINTs of Person REST API. 
 
-- ADD
+- ADD:
 <pre name="code">
 Method: POST
 URL: http://localhost:3000/person
