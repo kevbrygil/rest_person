@@ -13,9 +13,9 @@ Development of an REST API for CRUD operations of Persons
 - Nodejs with NPM
 
 # Intall Packages
-1- Open Terminal
-2- Go to the source file of the APP
-3- Type the following in the Terminal:
+- Open Terminal
+- Go to the source file of the APP
+- Type the following in the Terminal:
 	<pre name="code" class="bash hljs ">npm i</pre>
 
 
